@@ -1,6 +1,5 @@
 package com.cryptocurrency.packages.data.api
 
-import com.cryptocurrency.packages.data.repository.ApiRepository
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -10,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 
 object RetrofitInstance {
-    private const val baseUrl = "https://api.coinpaprika.com/v1/"
+    private const val baseUrl = "https://pro-api.coinmarketcap.com/v1/"
 
     val api: ApiRepository by lazy {
         Retrofit.Builder()
