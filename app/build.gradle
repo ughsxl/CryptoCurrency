@@ -15,7 +15,25 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
+        buildConfigField "String", "API_KEY", "\"${properties.getProperty("API_KEY")}\""
+        buildConfigField "int", "COIN_LIMIT", "${properties.getProperty("COIN_LIMIT")}"
     }
+
+    buildscript {
+        repositories {
+            mavenCentral()
+            google()
+            jcenter()
+            maven {
+                url "https://maven.google.com"
+            }
+        }
+    }
+
 
     buildTypes {
         release {
@@ -40,7 +58,7 @@ dependencies {
 
     // Core implementation
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
 
     // UI implementation
     implementation 'com.google.android.material:material:1.6.1'
@@ -52,17 +70,17 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Fragment implementation
-    implementation 'androidx.fragment:fragment-ktx:1.5.2'
+    implementation 'androidx.fragment:fragment-ktx:1.5.3'
 
     // Coroutines implementation
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    //implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-ktx:1.4.1'
 
     // Retrofit & Gson converter implementation
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     // OkHttp interceptor implementation
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
-
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
 
 }

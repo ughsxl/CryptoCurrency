@@ -4,6 +4,7 @@
     package="com.cryptocurrency.packages">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CryptoCurrency"
+        android:theme="@style/Theme.CryptoCurrency.Night"
         tools:targetApi="31">
         <activity
             android:name=".presentation.view.container.FragmentContainer"

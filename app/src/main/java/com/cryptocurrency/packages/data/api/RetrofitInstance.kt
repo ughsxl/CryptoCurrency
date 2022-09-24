@@ -10,12 +10,20 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
     private const val baseUrl = "https://pro-api.coinmarketcap.com/v1/"
+    lateinit var api: ApiRepository
 
-    val api: ApiRepository by lazy {
-        Retrofit.Builder()
-            .baseUrl(baseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(ApiRepository::class.java)
+    fun createApi(): ApiRepository? {
+        return if (this::api.isInitialized) null
+        else {
+            api = Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ApiRepository::class.java)
+
+            api
+        }
+
     }
+
 }

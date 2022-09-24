@@ -3,7 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/done.xml" value="0.112" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/downloading.xml" value="0.112" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/ic_baseline_arrow_downward_24.xml" value="0.112" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.112" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.112" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/ic_outline_circle_24.xml" value="0.112" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/more_icon.xml" value="0.106" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/progress_bar.xml" value="0.1" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/rounded_item.xml" value="0.106" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/activity_main.xml" value="0.14444444444444443" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/coin_item.xml" value="0.2" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/coin_list.xml" value="0.1" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/fragment_container.xml" value="0.14444444444444443" />
       </map>
     </option>

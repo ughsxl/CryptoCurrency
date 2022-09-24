@@ -1,18 +1,11 @@
 package com.cryptocurrency.packages.presentation.view.container
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
+import androidx.fragment.app.Fragment
 import com.cryptocurrency.packages.R
-import com.cryptocurrency.packages.data.api.RetrofitInstance
-import com.cryptocurrency.packages.data.repository.CoinRepositoryImpl
-import com.cryptocurrency.packages.domain.mapper.CoinListMapper
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import retrofit2.HttpException
-import java.io.IOException
-import kotlin.concurrent.thread
+import com.cryptocurrency.packages.databinding.FragmentContainerBinding
+import com.cryptocurrency.packages.presentation.view.screen.ListFragment
 
 /**
  * @author Krupko Illa
@@ -20,8 +13,18 @@ import kotlin.concurrent.thread
  */
 
 class FragmentContainer : AppCompatActivity() {
+    private val binding by lazy {
+        FragmentContainerBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_container)
+        setContentView(binding.root)
+
+        if(savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container_view, ListFragment())
+                .commit()
+        }
     }
 }

@@ -1,7 +1,8 @@
 package com.cryptocurrency.packages.domain.repository
 
-import android.content.Context
+
 import com.cryptocurrency.packages.data.model.dto.CoinDto
+import com.cryptocurrency.packages.data.model.dto.Resource
 
 /**
  * @author Krupko Illa
@@ -10,6 +11,6 @@ import com.cryptocurrency.packages.data.model.dto.CoinDto
 
 interface CoinRepository {
 
-    suspend fun getCoinList(context: Context): List<CoinDto>?
+    suspend fun getCoinList(): List<CoinDto>
 
 }

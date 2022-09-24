@@ -12,7 +12,7 @@ data class Coin(
     val id: Int,
     val name: String,
     val symbol: String,
-    val rank: Int,
+    val rank: String,
     val tags: List<String>,
-    val value: String
+    val price: String
 )

@@ -1,6 +1,6 @@
 package com.cryptocurrency.packages.data.api
 
-import com.cryptocurrency.packages.data.model.dto.Response
+import com.cryptocurrency.packages.data.model.dto.CoinListDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -12,6 +12,6 @@ import retrofit2.http.Query
 interface ApiRepository {
 
     @GET("cryptocurrency/listings/latest")
-    suspend fun getCoinList(@Query("CMC_PRO_API_KEY") apiKey: String, @Query("limit") listLimit: Int): Response
+    suspend fun getCoinList(@Query("CMC_PRO_API_KEY") apiKey: String, @Query("limit") listLimit: Int): CoinListDto
 
 }

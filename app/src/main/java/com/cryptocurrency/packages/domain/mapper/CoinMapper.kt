@@ -2,6 +2,7 @@ package com.cryptocurrency.packages.domain.mapper
 
 import com.cryptocurrency.packages.data.model.dto.CoinDto
 import com.cryptocurrency.packages.domain.model.Coin
+import kotlin.math.roundToInt
 
 /**
  * @author Krupko Illa
@@ -9,12 +10,12 @@ import com.cryptocurrency.packages.domain.model.Coin
  */
 
 class CoinMapper : Mapper<CoinDto, Coin> {
-    override fun map(model: CoinDto): Coin = Coin (
+    override fun map(model: CoinDto) = Coin (
             id = model.id,
             name = model.name,
-            symbol = model.symbol,
-            rank = model.rank,
+            symbol = "(" + model.symbol + ")",
+            rank = model.rank.toString() + ".",
             tags = model.tags,
-            value = "${model.quote.USD.price}$"
+            price = model.quote.USD.price.roundToInt().toString() + " $"
         )
 }
