@@ -12,10 +12,12 @@
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/more_icon.xml" value="0.106" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/progress_bar.xml" value="0.1" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/rounded_item.xml" value="0.106" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/drawable/sort_icon.xml" value="0.112" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/activity_main.xml" value="0.14444444444444443" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/coin_item.xml" value="0.2" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/coin_list.xml" value="0.1" />
         <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/layout/fragment_container.xml" value="0.14444444444444443" />
+        <entry key="..\:/Not System/Programming/CryptoCurrency/app/src/main/res/menu/coin_list_menu.xml" value="0.15555555555555556" />
       </map>
     </option>
   </component>

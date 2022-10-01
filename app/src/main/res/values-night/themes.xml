@@ -10,7 +10,15 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <!-- Customize your theme here. -->
+        <item name="android:actionOverflowButtonStyle">@style/SortActionButtonOverflowStyle</item>
+        <item name="actionBarSize">45dip</item>
+    </style>
+    
+    <style name="SortActionButtonOverflowStyle" parent="android:Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/sort_icon</item>
+        <item name="background">?android:attr/actionBarItemBackground</item>
+        <item name="contentDescription">Sort</item>
     </style>
 </resources>

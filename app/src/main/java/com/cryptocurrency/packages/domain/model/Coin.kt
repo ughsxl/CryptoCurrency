@@ -1,7 +1,5 @@
 package com.cryptocurrency.packages.domain.model
 
-import com.cryptocurrency.packages.data.model.submodel.Quote
-
 
 /**
  * @author Krupko Illa
@@ -12,7 +10,7 @@ data class Coin(
     val id: Int,
     val name: String,
     val symbol: String,
-    val rank: String,
+    val rank: Int,
     val tags: List<String>,
-    val price: String
+    val price: Int
 )

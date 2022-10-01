@@ -13,9 +13,9 @@ class CoinMapper : Mapper<CoinDto, Coin> {
     override fun map(model: CoinDto) = Coin (
             id = model.id,
             name = model.name,
-            symbol = "(" + model.symbol + ")",
-            rank = model.rank.toString() + ".",
+            symbol = model.symbol,
+            rank =  model.rank,
             tags = model.tags,
-            price = model.quote.USD.price.roundToInt().toString() + " $"
+            price = model.quote.USD.price.roundToInt()
         )
 }

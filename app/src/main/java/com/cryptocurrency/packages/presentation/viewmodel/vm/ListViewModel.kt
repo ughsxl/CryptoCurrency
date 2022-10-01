@@ -7,6 +7,7 @@ import com.cryptocurrency.packages.common.UiText
 import com.cryptocurrency.packages.data.model.dto.Resource
 import com.cryptocurrency.packages.domain.interactor.CoinListInteractor
 import com.cryptocurrency.packages.domain.model.CoinListWrapper
+import com.cryptocurrency.packages.domain.model.CoinWrapper
 import kotlinx.coroutines.flow.*
 
 /**
@@ -18,6 +19,9 @@ class ListViewModel(private val interactor: CoinListInteractor) : ViewModel() {
 
     private val _coins = MutableStateFlow(CoinListWrapper())
     val coins: StateFlow<CoinListWrapper> = _coins.asStateFlow()
+
+    private val _coin = MutableStateFlow(CoinWrapper())
+    val coin: StateFlow<CoinWrapper> = _coin.asStateFlow()
 
 
     init {
@@ -46,7 +50,7 @@ class ListViewModel(private val interactor: CoinListInteractor) : ViewModel() {
                     _coins.value = CoinListWrapper(
                         data = emptyList(),
                         message = UiText.coinsAreLoadingMessage,
-                        state =  Resource.Loading()
+                        state = Resource.Loading()
                     )
 
                 }
