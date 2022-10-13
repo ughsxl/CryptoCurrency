@@ -1,12 +1,8 @@
 package com.cryptocurrency.packages.common
 
-
-
 /**
  * @author Krupko Illa
- * Created 01.10.2022 at 18:26
+ * Created 04.10.2022 at 21:19
  */
-
-class Extensions {
-
+  class CoinDispatchers {
 }

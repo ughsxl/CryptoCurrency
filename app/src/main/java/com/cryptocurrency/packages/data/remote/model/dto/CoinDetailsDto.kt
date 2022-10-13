@@ -1,12 +1,11 @@
-package com.cryptocurrency.packages.data.model.dto
+package com.cryptocurrency.packages.data.remote.model.dto
 
-import com.cryptocurrency.packages.data.model.submodel.Quote
+import com.cryptocurrency.packages.data.remote.model.submodel.Quote
 import com.google.gson.annotations.SerializedName
 
 data class CoinDto(
-    @SerializedName("cmc_rank")
-    val rank: Int,
     val id: Int,
+    val rank: Int,
     val name: String,
     val quote: Quote,
     val symbol: String,

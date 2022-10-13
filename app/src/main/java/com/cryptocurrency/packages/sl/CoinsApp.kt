@@ -1,8 +1,7 @@
 package com.cryptocurrency.packages.common
 
 import android.app.Application
-import com.cryptocurrency.packages.domain.coins_communication.CoinsService
-import com.cryptocurrency.packages.domain.model.Coin
+import com.cryptocurrency.packages.presentation.view.adapter.CoinsService
 
 /**
  * @author Krupko Illa

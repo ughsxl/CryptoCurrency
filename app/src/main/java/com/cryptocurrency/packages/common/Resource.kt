@@ -1,4 +1,4 @@
-package com.cryptocurrency.packages.data.model.dto
+package com.cryptocurrency.packages.data.remote.model.dto
 
 /**
  * @author Krupko Illa
