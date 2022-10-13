@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">CryptoCurrency</string>
+
+    <string name="connectionErrorMessage">No internet connection..
+Swipe down to try again</string>
+    <string name="unknownErrorMessage">Something went wrong..
+Swipe down to try again</string>
+    <string name="serviceUnavailableErrorMessage">Service unavailable..
+Swipe down to try again</string>
+    <string name="requestTimeoutErrorMessage">Timeout!
+Swipe down to try again</string>
+
+    <string name="coinsAreLoadedMessage">Coins are loaded!</string>
+    <string name="coinsAreLoadingMessage">Coins are loading..</string>
+    <string name="sort_title">Sort</string>
+    <string name="sort_by_alphabet_title">Sort by Alphabet</string>
+    <string name="sort_by_rank_title">Sort by Rank</string>
+
 </resources>

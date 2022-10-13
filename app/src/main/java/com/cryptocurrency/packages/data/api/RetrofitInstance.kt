@@ -1,22 +1,32 @@
 package com.cryptocurrency.packages.data.api
 
-import com.cryptocurrency.packages.data.repository.ApiRepository
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
  * @author Krupko Illa
- * Created 01.09.2022 at 21:57
+ * @since 13.10.2022 is created
  */
+interface RetrofitInstance {
 
-object RetrofitInstance {
-    private const val baseUrl = "https://api.coinpaprika.com/v1/"
+	fun buildService(): ApiDataSource
 
-    val api: ApiRepository by lazy {
-        Retrofit.Builder()
-            .baseUrl(baseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(ApiRepository::class.java)
-    }
+	class Base(
+		private val apiDataSource: Class<ApiDataSource>
+	) : RetrofitInstance {
+		override fun buildService(): ApiDataSource {
+			val retrofit = Retrofit.Builder()
+				.baseUrl(BASE_URL)
+				.addConverterFactory(GsonConverterFactory.create())
+				.build()
+
+			return retrofit.create(apiDataSource)
+		}
+
+		companion object {
+			private const val BASE_URL = "https://api.coinpaprika.com/v1/"
+		}
+
+	}
+
 }
